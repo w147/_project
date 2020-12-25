@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>小黑记事本</title>
+	<script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="text" v-on:keyup.enter="add">
+		<ul>
+			<li v-for="(elem, index) in list">
+				{{index+1}}. {{elem}}
+			</li>
+		</ul>
+		<div>{{list.length}} items left</div>
+		<input type="button" value="clear" @click="clear">
+	</div>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				text: "伯索",
+				list: [
+					"吃饭饭",
+					"睡觉觉",
+					"写代码"
+				]
+			},
+			methods: {
+				add: function(){
+					this.list.push(this.text)
+				},
+				clear: function(){
+					console.log(this.list.length)
+					this.list = []
+					console.log(this.list.length)
+				}
+			}
+		})
+	</script>
+</body>
+</html>

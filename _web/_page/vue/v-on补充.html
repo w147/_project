@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<title>v-on补充</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<!-- 
+		1. 传参
+		2. 事件修饰符
+	-->
+	<div id="app">
+		<input type="button" value="点击" @click="doIt">
+		<input type="button" value="点击" @click="doIt(666,'老铁')">
+		<input type="text" @keyup.enter="sayHi">
+	</div>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+			},
+			methods: {
+				doIt: function(p1, p2){
+					console.log("做IT")
+					console.log(p1)
+					console.log(p2)
+				},
+				sayHi: function(){
+					alert("吃了吗")
+				},
+			}
+		})
+	</script>
+</body>
+</html>

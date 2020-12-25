@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<title>v-model指令</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app"> 
+		<input type="button" v-model="messgae" @click="setM">
+		<input type="text" v-model="messgae" @keyup.enter="getM">
+		<h2>{{messgae}}</h2>
+	</div>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				messgae: "黑马程序员"
+			},
+			methods: {
+				getM: function(){
+					alert(this.messgae)
+				},
+				setM: function(){
+					this.messgae = "沙丁鱼"
+				}
+			}
+		})
+	</script>
+</body>
+</html>

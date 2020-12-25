@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<title>v-for指令</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<!-- 
+		根据数据生成列表结构
+		数组长度更新同步页面
+	-->
+	<div id="app">
+		<ul>
+			<li v-for="elem in arr">
+				黑马程序员校区: {{elem}}
+			</li>
+		</ul>
+		<ul>
+			<li v-for="(it, index) in arr">
+				{{index+1}}黑马程序员校区: {{elem}}
+			</li>
+		</ul>
+		<input type="button" value="添加" @click="add">
+		<input type="button" value="移除" @click="remove">
+		<h2 v-for="item in vegetables" v-bind:title="item.name">
+			{{item.name}}
+		</h2>
+	</div>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				arr: ["北京", "上海", "广州", "深圳"],
+				vegetables: [
+					{name: "西蓝花炒蛋"},
+					{name: "蛋炒西蓝花"},
+				]
+			},
+			methods: {
+				add: function(){
+					this.vegetables.push({name: "花菜炒蛋"})
+				},
+				remove: function(){
+					this.vegetables.shift()
+				}
+			}
+		})
+	</script>
+</body>
+</html>

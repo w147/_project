@@ -1,0 +1,217 @@
+div {
+    display: block;
+}
+.all {
+    position: relative;
+    margin: auto;
+    width: 600px;
+    height: 560px;
+    background-color: #eeeeee;
+    text-align: center;
+    font-family: Arial;
+}
+.left {
+    position: absolute;
+    top: 10%;
+    left: 3%;
+    width: 15%;
+    height: 40%;
+    border: 1px solid blue;
+}
+.content {
+    position: absolute;
+    top: 10%;
+    left: 23%;
+    width: 75%;
+    height: 85%;
+    border: 2px solid blue;
+}
+.w1 {
+    position: absolute;
+    top: 0;
+    width: 33%;
+    height: 33%;
+    border: 1px solid blue;
+}
+.w2 {
+    position: absolute;
+    left: 33%;
+    width: 33%;
+    height: 33%;
+    border: 1px solid blue;
+}
+.w3 {
+    position: absolute;
+    left: 66%;
+    width: 33%;
+    height: 33%;
+    border: 1px solid blue;
+}
+.w4 {
+    position: absolute;
+    top: 33%;
+    width: 33%;
+    height: 33%;
+    border: 1px solid blue;
+}
+.w5 {
+    position: absolute;
+    top: 33%;
+    left: 33%;
+    width: 33%;
+    height: 33%;
+    border: 1px solid blue;
+}
+.w6 {
+    position: absolute;
+    top: 33%;
+    left: 66%;
+    width: 33%;
+    height: 33%;
+    border: 1px solid blue;
+}
+.w7 {
+    position: absolute;
+    top: 66%;
+    width: 33%;
+    height: 33%;
+    border: 1px solid blue;
+}
+.w8 {
+    position: absolute;
+    top: 66%;
+    left: 33%;
+    width: 33%;
+    height: 33%;
+    border: 1px solid blue;
+}
+.w9 {
+    position: absolute;
+    top: 66%;
+    left: 66%;
+    width: 33%;
+    height: 33%;
+    border: 1px solid blue;
+}
+.n1 {
+    position: absolute;
+    top: 0;
+    width: 33%;
+    height: 33%;
+    background-color: transparent;
+    border: 1px solid #aaaadd;
+}
+.n2 {
+    position: absolute;
+    top: 0;
+    left: 33%;
+    width: 33%;
+    height: 33%;
+    background-color: transparent;
+    border: 1px solid #aaaadd;
+}
+.n3 {
+    position: absolute;
+    top: 0;
+    left: 66%;
+    width: 33%;
+    height: 33%;
+    background-color: transparent;
+    border: 1px solid #aaaadd;
+}
+.n4 {
+    position: absolute;
+    top: 33%;
+    width: 33%;
+    height: 33%;
+    background-color: transparent;
+    border: 1px solid #aaaadd;
+}
+.n5 {
+    position: absolute;
+    top: 33%;
+    left: 33%;
+    width: 33%;
+    height: 33%;
+    background-color: transparent;
+    border: 1px solid #aaaadd;
+}
+.n6 {
+    position: absolute;
+    top: 33%;
+    left: 66%;
+    width: 33%;
+    height: 33%;
+    background-color: transparent;
+    border: 1px solid #aaaadd;
+}
+.n7 {
+    position: absolute;
+    top: 66%;
+    width: 33%;
+    height: 33%;
+    background-color: transparent;
+    border: 1px solid #aaaadd;
+}
+.n8 {
+    position: absolute;
+    top: 66%;
+    left: 33%;
+    width: 33%;
+    height: 33%;
+    background-color: transparent;
+    border: 1px solid #aaaadd;
+}
+.n9 {
+    position: absolute;
+    top: 66%;
+    left: 66%;
+    width: 33%;
+    height: 33%;
+    background-color: transparent;
+    border: 1px solid #aaaadd;
+}
+.wo {
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    top: 2%;
+    left: 2%;
+    border: 2px solid transparent;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 200%;
+}
+.b1 {
+    background: #325ecd;
+    border: 1px solid #0028aa;
+    border-radius: 10px;
+    display: inline-block;
+    width: 76%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 100%;
+    color: #fff;
+}
+.b2 {
+    background: #325ecd;
+    border: 1px solid #0028aa;
+    border-radius: 10px;
+    display: inline-block;
+    width: 76%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 100%;
+    color: #fff;
+}
+.b3 {
+    background: #325ecd;
+    border: 1px solid #0028aa;
+    border-radius: 10px;
+    display: inline-block;
+    width: 76%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 100%;
+    color: #fff;
+}

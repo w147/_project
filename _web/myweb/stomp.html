@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <title>Home</title>
+  <spring:url value="/webjars/jquery/2.0.3/jquery.min.js" var="jQueryCore" />
+  <script src="${jQueryCore}"></script>
+  <spring:url value="/webjars/sockjs-client/0.3.4/sockjs.min.js" var="sockJs" />
+  <script src="${sockJs}"></script>
+</head>
+
+<body>
+  <button id="stop">Stop</button>
+
+  <script style="text/javascript">
+    $(function () {
+      var wsUrl = "ws://localhost:2020/plaso_ws/endpoint"
+      var sock = new WebSocket(wsUrl);
+      sock.onopen = function () {
+        console.log('Opening');
+        sayMarco();
+      }
+
+      sock.onmessage = function (e) {
+        console.log('Received message: ', e.data);
+        $('#output').append('Received "' + e.data + '"<br/>');
+        setTimeout(function () { sayMarco() }, 2000);
+      }
+
+      sock.onclose = function () {
+        console.log('Closing');
+      }
+
+      function sayMarco() {
+        console.log('Sending Marco!');
+        $('#output').append('Sending "Marco!"<br/>');
+        sock.send("Marco!");
+      }
+
+      $('#stop').click(function () { sock.close() });
+    })
+  </script>
+
+  <div id="output"></div>
+</body>
+
+</html>
