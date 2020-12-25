@@ -1,0 +1,22 @@
+{
+  "name": "local-js",
+  "version": "1.0.0",
+  "description": "本地测试",
+  "main": "main.js",
+  "scripts": {
+    "test": "testm"
+  },
+  "author": "wyf",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "flat": "^5.0.2",
+    "koa": "^2.13.0",
+    "koa-router": "7.0.0",
+    "koa-static": "^5.0.0",
+    "mysql2": "^2.2.5",
+    "redis": "^3.0.2",
+    "websocket": "^1.0.31"
+  }
+}
