@@ -1,0 +1,10 @@
+node_modules
+.idea
+test.js
+package-lock.json
+logs/
+pm2temp.config.js
+test
+.vscode/
+*.class
+.vscode

@@ -1,4 +1,5 @@
-ip=`curl ip.sb`
+#ip=`curl ip.sb`
+ip=`ifconfig | grep 192.`
 hostname=`hostname`
 head='Content-Type: application/json'
 data='{"msgtype": "text", "text": {"content": "'$hostname' '$ip'"}}'
