@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: examplefanoutingress
+  annotations:
+    Kubernetes.io/ingress.class: traefik
+    traefik.frontend.rule.type: PathPrefixStrip
+spec:
+  rules:
+  - host: w.plaso.cn
+    http:
+      paths:
+      - path: /httpdservice
+        backend:
+          serviceName: exampleservicehttpd
+          servicePort: 8081
+      - path: /nginxservice
+        backend:
+          serviceName: exampleservicenginx
+          servicePort: 8081

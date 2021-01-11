@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: examplepod
+spec:
+  containers:
+    - name: testcontainer
+      image: docker.io/appropriate/curl
+      imagePullPolicy: IfNotPresent
+      command: ['sh','-c']
+      args: ['echo "test pod for headless service!"; sleep 3600']

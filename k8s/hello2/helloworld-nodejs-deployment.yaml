@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: helloworld-nodejs
+  name: helloworld-nodejs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: helloworld-nodejs
+  template:
+    metadata:
+      labels:
+        app: helloworld-nodejs
+    spec:
+      containers:
+      - image: docker.io/xzxiaoshan/helloworld-nodejs:latest
+        name: helloworld-nodejs
+        ports:
+        - containerPort: 8080

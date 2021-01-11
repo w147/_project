@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: examplejobv1
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: examplejobcontainer
+          image: busybox
+          imagePullPolicy: IfNotPresent
+          command: ['sh','-c']
+          args: ['echo "Start Job!"; sleep 30; echo "Job Done!"']

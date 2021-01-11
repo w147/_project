@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exampledeployforservice
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      example: exampleforservice
+  template:
+    metadata:
+      labels:
+        example: exampleforservice
+    spec:
+      containers:
+        - name: pythonservice
+          imagePullPolicy: IfNotPresent
+          image: python:3.7
+          command: ['sh','-c']
+          args: ['echo "<p>The host is $(hostname)</p>">index.html; python -m http.server 80']
+          ports:
+          - name: http
+            containerPort: 80

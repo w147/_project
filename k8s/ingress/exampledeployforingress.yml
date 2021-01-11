@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exampledeploynginx
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      example: deploymentfornginx
+  template:
+    metadata:
+      labels:
+        example: deploymentfornginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.8.1
+          ports:
+          - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exampledeployhttpd
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      example: deploymentforhttpd
+  template:
+    metadata:
+      labels:
+        example: deploymentforhttpd
+    spec:
+      containers:
+        - name: httpd
+          image: httpd:2.2
+          ports:
+          - containerPort: 80

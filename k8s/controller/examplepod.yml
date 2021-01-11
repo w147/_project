@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: examplepod
+spec:
+  containers:
+    - name: examplepod-container
+      image: busybox
+      command: ['sh','-c']
+      args: ['echo "Hello Kubernates replace!"; sleep 3600']
