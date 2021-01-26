@@ -1,15 +1,32 @@
-package zookeeper.demo;
+package com.plaso;
 
-import org.apache.zookeeper.WatchedEvent;
-import org.apache.zookeeper.Watcher;
-import org.apache.zookeeper.ZooKeeper;
+import org.apache.zookeeper.*;
 import org.apache.zookeeper.data.Stat;
 import org.junit.Test;
 
 /**
- * 对ZooKeeper节点数据的查询、删除和修改
+ * Hello world!
+ *
  */
-public class NodeTestDemo {
+public class NodeData {
+    @Test
+    public void createNodeData() throws Exception {
+        String connectStr = "centos01:2181,centos02:2181,centos03:2181";
+        // 参数1：服务器连接字符串
+        // 参数2：连接超时时间
+        // 参数3：观察者对象（回调方法）
+        ZooKeeper zk = new ZooKeeper(connectStr, 3000, null);
+        /*
+         * CreateMode 取值如下：
+         * PERSISTENT：持久节点
+         * PERSISTENT_SEQUENTIAL：持久顺序节点(自动编号)
+         * EPHEMERAL：临时节点，客户端断开连接时，这种节点会被自动删除
+         * EPHEMERAL_SEQUENTIAL：临时顺序节点
+         */
+        String path = zk.create("/serverGroup", "zk002_data".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+        //输出节点版本号
+        System.out.println(path);
+    }
 
     /**
      * 修改节点数据
@@ -23,7 +40,6 @@ public class NodeTestDemo {
         System.out.println(stat.getVersion());
     }
 
-
     /**
      * 获取节点元数据
      */
@@ -34,11 +50,10 @@ public class NodeTestDemo {
         ZooKeeper zk = new ZooKeeper(connectStr, 3000, null);
         Stat stat = new Stat();
         //返回指定路径上的节点数据和节点状态，节点的状态会放入stat对象中
-        byte[] bytes = zk.getData("/zk002", null, stat);
+        byte[] bytes = zk.getData("/zk001", null, stat);
         //输出节点元数据
         System.out.println(new String(bytes));
     }
-
 
     /**
      * 获取节点数据，并加入观察者对象Watcher（一次监听）
@@ -65,7 +80,6 @@ public class NodeTestDemo {
             Thread.sleep(3000);
         }
     }
-
 
     /**
      * 获取节点数据，并加入观察者对象Watcher，实现持续监听
@@ -110,7 +124,6 @@ public class NodeTestDemo {
         //删除节点
         zk.delete("/zk002", -1);
     }
-
 
     @Test
     public void existsPath() throws Exception {
