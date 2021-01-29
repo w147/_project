@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>hello world</title>
+<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        var root = document.getElementById('root')
+        const reactH3 = React.createElement("h3", {}, "React DOM");
+        const reactP = React.createElement("p", {}, "Create V DOM");
+        const reactSpan = React.createElement("span", {}, reactH3, reactP);
+        ReactDOM.render(reactSpan, root);
+    </script>
+</body>
+</html>
