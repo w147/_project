@@ -10,23 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./add-content.js":
-/*!************************!*\
-  !*** ./add-content.js ***!
-  \************************/
+/***/ "./src/add-content.js":
+/*!****************************!*\
+  !*** ./src/add-content.js ***!
+  \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => /* export default binding */ __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {\r\n    document.write(\"T'm using npm scripts!\")\r\n}\n\n//# sourceURL=webpack://mywebpack/./add-content.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => /* export default binding */ __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {\r\n    document.write(\"T'm using webpack-dev-server!\")\r\n}\n\n//# sourceURL=webpack://mywebpack/./src/add-content.js?");
 
 /***/ }),
 
-/***/ "./index.js":
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _add_content_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./add-content.js */ \"./add-content.js\");\n\r\n\r\ndocument.write(\"My first Webpack app.<br/>\");\r\n\r\n(0,_add_content_js__WEBPACK_IMPORTED_MODULE_0__.default)()\n\n//# sourceURL=webpack://mywebpack/./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _add_content_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./add-content.js */ \"./src/add-content.js\");\n\r\n\r\ndocument.write(\"My first Webpack app.<br/>\");\r\n\r\n(0,_add_content_js__WEBPACK_IMPORTED_MODULE_0__.default)()\n\n//# sourceURL=webpack://mywebpack/./src/index.js?");
 
 /***/ })
 
@@ -87,7 +87,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _add
 /************************************************************************/
 /******/ 	// startup
 /******/ 	// Load entry module
-/******/ 	__webpack_require__("./index.js");
+/******/ 	__webpack_require__("./src/index.js");
 /******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
