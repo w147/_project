@@ -6,7 +6,7 @@
     <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
     <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
-    <!-- Don't use this in production: -->
+    
     <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
 </head>
 <style type="text/css">
@@ -35,7 +35,7 @@
     }
 </style>
 <body>
-<!-- 添加文档主体内容 -->
+
 <div id='id-div-react'>
     <p>
         Clicked: <span id="id-count">0</span> times.<br/><br/>
@@ -46,7 +46,7 @@
     </p>
 </div>
 <script type="text/babel">
-    // TODO: get div
+   
     var divReact = document.getElementById('id-div-react');
     // TODO: define Reducer
     function reducerCounter(state, action) {
@@ -91,18 +91,6 @@
         }, 1000)
     });
 </script>
-<!--
-  Note: this page is a great way to try React but it's not suitable for production.
-  It slowly compiles JSX with Babel in the browser and uses a large development build of React.
 
-  Read this section for a production-ready setup with JSX:
-  https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
-
-  In a larger project, you can use an integrated toolchain that includes JSX instead:
-  https://reactjs.org/docs/create-a-new-react-app.html
-
-  You can also use React without JSX, in which case you can remove Babel:
-  https://reactjs.org/docs/react-without-jsx.html
--->
 </body>
 </html>
