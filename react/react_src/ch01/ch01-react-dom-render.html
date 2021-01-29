@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <title>React render method</title>
-    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <!-- Don't use this in production: -->
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
 </head>
 <style type="text/css">
     body {
@@ -47,7 +46,7 @@
      */
     function updateTime() {
         const renderDiv = (<div>
-            <h3>React 渲染机制</h3>
+            <h3>React 渲染机制 {new Date().toLocaleTimeString()}</h3>
             <p>现在时间是 {new Date().toLocaleTimeString()}.</p>
         </div>);
         // TODO: get div
