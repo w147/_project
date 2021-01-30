@@ -53,7 +53,7 @@
     function UserLoggedOutComp(props) {
         return <p>Hello, please login first.</p>;
     }
-     - conditional render
+    //  - conditional render
     function UserLoggedComp(props) {
         const isLoggedIn = props.isLoggedIn;
         if(isLoggedIn) {
@@ -62,7 +62,7 @@
             return <UserLoggedOutComp />;
         }
     }
-     - login button
+    //  - login button
     function LoginButton(props) {
         return (
             <button onClick={props.onClick}>
@@ -70,7 +70,7 @@
             </button>
         );
     }
-     - logout button
+    //  - logout button
     function LogoutButton(props) {
         return (
             <button onClick={props.onClick}>
