@@ -44,7 +44,7 @@
     for(let i=0; i<5; i++) {
         id[i] = Math.round((Math.random()*Math.pow(10,10)));
     }
-     - list item
+    //  - list item
     function ListItem(props) {
         const alpha = props.alpha;
         const index = props.index;
@@ -53,7 +53,7 @@
             <li key={id[index].toString()}>{alpha}</li>
         );
     }
-     - list comp
+    //  - list comp
     function AlphaList(props) {
         const alpha = props.alpha;
         const listItems = alpha.map((alpha, index) =>

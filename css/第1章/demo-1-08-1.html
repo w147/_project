@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../common/note.js"></script>
+    <script>new Note('1-8').render()</script>
+    <style>
+        .chessboard {
+            width: 600px;
+            height: 600px;
+            background-color: silver;
+            margin: 40px auto;
+            border: 10px solid darkgray;
+        }
+        .chessboard div {
+            height: 150px;
+            display: flex;
+            flex-direction: row;
+            /* border: 1px solid black; */
+        }
+        .chessboard div span{
+            width: 150px;
+            height: 150px;
+            /* border: 1px solid red; */
+        }
+        .chessboard div:nth-child(odd) span:nth-child(odd),
+        .chessboard div:nth-child(even) span:nth-child(even) {
+            background-color: burlywood;
+        }
+        .chessboard div:nth-child(even) span:nth-child(odd),
+        .chessboard div:nth-child(odd) span:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <figure class="chessboard">
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </figure>
+</body>
+</html>

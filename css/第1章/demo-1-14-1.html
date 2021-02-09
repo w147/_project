@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.seasons {
+			font-size: 20px;
+			width: 20em;
+            height: 20em;
+			display: grid;
+			grid-template-columns: repeat(2, 50%);
+			grid-gap: 0.2em;
+			text-align: center;
+			line-height: 10em;
+		} 
+		.seasons div {
+			font-size: 1.5em;
+			border: 0.1em solid gray;
+		}
+		.seasons div:nth-child(3) {
+			order: 4;
+		}
+		.seasons div:nth-child(1){background-color: springgreen;  border-radius: 100% 0 0 0;}
+		.seasons div:nth-child(2){background-color: #ff4500;    border-radius: 0 100% 0 0;}
+		.seasons div:nth-child(3){background-color: rgb(255, 215, 0); border-radius: 0 0 100% 0;}
+		.seasons div:nth-child(4){background-color: hsla(195, 100%, 50%);   border-radius: 0 0 0 100%;}
+		
+	</style>
+</head>
+<body>
+	<figure class="seasons">
+		<div>spring</div>
+		<div>summer</div>
+		<div>fall</div>
+		<div>winter</div>
+	</figure>
+</body>
+</html>
