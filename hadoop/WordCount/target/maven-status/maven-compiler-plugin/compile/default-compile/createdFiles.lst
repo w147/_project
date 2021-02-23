@@ -1,0 +1,3 @@
+com\plaso\MyMapper.class
+com\plaso\MyReducer.class
+com\plaso\WordCount.class

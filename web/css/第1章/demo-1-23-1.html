@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 20em;
+            font-size: 6px;
+            display: flex;
+            /* flex-direction: column; */
+            position: relative;
+            margin: 4em;
+        }
+        .container span{
+            display: block;
+            width: 20em;
+            height: 20em;
+            border-radius: 50%;
+            position: absolute; 
+        }
+        .container span:nth-child(1){left: 0em; background-color: red;}
+        .container span:nth-child(2){left: 10em; background-color: orange;}
+        .container span:nth-child(3){left: 20em; background-color: yellow;}
+        .container span:nth-child(4){left: 30em; background-color: green;}
+        .container:nth-child(2) span:nth-child(1) {z-index: 4;}
+        .container:nth-child(2) span:nth-child(2) {z-index: 3;}
+        .container:nth-child(2) span:nth-child(3) {z-index: 2;}
+        .container:nth-child(2) span:nth-child(4) {z-index: 1;}
+        .container:nth-child(3) span:nth-child(2) {z-index: -1;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
