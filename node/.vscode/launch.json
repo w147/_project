@@ -11,7 +11,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "D:\\GitLab\\_myproject\\js\\server\\koa.js"
+            "program": "D:\\GitLab\\_project\\node\\dealLog\\statisticsLog.js"
+            // "program": "D:\\GitLab\\_project\\node\\test.js"
         }
     ]
 }
